@@ -1,5 +1,6 @@
 {
-  "homepage": "https://devsagarkhatri.github.io/weather",
+  "homepage": "https://devsagarkhatri.github.io/weather/",
+  "start_url": ".",
   "name": "weather",
   "version": "0.1.0",
   "private": true,
@@ -20,7 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "master -d build",
+    "deploy": "gh-pages -d build -b master --remote gh-pages",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

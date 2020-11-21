@@ -3,7 +3,7 @@ import axios from 'axios';
 let weather = require('openweather-apis');
 let data=[];
 const API_KEY= "7926496c354685ac73197e6c1d532ac1";
-const BASE_URL= "https://api.openweathermap.org/data/2.5/";
+const BASE_URL= "https://api.openweathermap.org/data/2.5/forecast?";
 
 
 export const fetchWeather = async (query) => {
