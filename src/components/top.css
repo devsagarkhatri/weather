@@ -1,0 +1,15 @@
+.top-container {
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  align-items: center;
+  background: rgb(38, 42, 51);
+  height: 100%;
+  color: white;
+}
+
+.top-container .title {
+  font-size: 37px;
+  align-items: baseline;
+  text-decoration: unset;
+}
