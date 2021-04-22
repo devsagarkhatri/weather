@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import TopSection from './components/top';
 import BottomSection from './components/bottom';
-import { get,getLocation} from './key.js';
+import { getLocation} from './key.js';
 
 class Store extends Component {
     

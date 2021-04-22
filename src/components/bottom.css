@@ -1,17 +1,17 @@
-.bottom-container {
-  background: url("https://picsum.photos/1600");
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  width: 100%;
-}
 
-.bottom-container .gradient {
+ .gradient {
   background: linear-gradient(
     180deg,
-    rgba(38, 42, 51, 1.1),
-    rgba(38, 42, 51, 0.6),
-    transparent
+    rgba(50,50,95,.9) ,
+    rgba(150,150,255,.3),
+    transparent 
   );
-  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-size: cover;
+  backdrop-filter: blur(0px) ;
+  box-shadow: unset 0 0 2000px rgba(255, 255, 255, .5);
+  min-width: 100%;
+  height: 100%;  
+  border-radius: 15px;
 }

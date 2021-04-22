@@ -18,7 +18,7 @@ body {
   height: 100%;
   width: 100%;
   background: transparent;
-  filter: blur(0px);
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,20 +27,25 @@ body {
   height: 60%;
   width: 50%;
   background: transparent;
-  border: 0px;
+  border: 0px black solid;
   border-radius: 15px;
   z-index: 2;
-  box-shadow: dimgrey 0px 0px 50px 0px;
+  box-shadow: dimgrey -5px -5px 20px 0px;
   display: flex;
-  flex-direction: column;
   overflow: hidden;
+  transition: .7s;
 }
 
-.main-container .top-section {
-  flex: 0 0 45%;
-  /* background: dodgerblue; */
+.app-container .main-container:hover{
+  box-shadow:  rgba(150,150,150,.4) 5px 5px 40px 20px;
+  transition: 1.5s;
 }
-.main-container .bottom-section {
-  flex: 0 0 55%;
-  /* background: rgba(38, 42, 51, 1.1); */
+
+
+.top-container {
+  flex: 0 0 100%;  
+  background: transparent;
+  z-index: 5;
+  text-align: center;
 }
+

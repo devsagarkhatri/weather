@@ -1,40 +1,56 @@
-import axios from 'axios';
+// import axios from 'axios';
+// import { useCallback } from 'react';
 
 let weather = require('openweather-apis');
-let data=[];
+
 const API_KEY= "7926496c354685ac73197e6c1d532ac1";
-const BASE_URL= "https://api.openweathermap.org/data/2.5/forecast?";
+
+export async function weatherBalloon( cityID ) {
+    var key = '7926496c354685ac73197e6c1d532ac1';
+    var URL = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityID+ '&appid=' + key;
+    console.log(URL);
+    try {
+        const result = await fetch(URL);
+    
+        if (result.status === 200) {
+          return { success: true, data: await result.json() };
+        }
+    
+        return { success: false, error: result.statusText };
+      } catch (ex) {
+        return { success: false, error: ex.message };
+      }
+    //  const result = await fetch(URL)  
+    // .then(function(resp) { return resp.json() }) // Convert data to json
+    // .then(function(data) {
+        
+    //     console.log(data);
+    //     console.log(typeof(data));
+    //     return [data];
+    // })
+    // .catch(function() {
+    //   // catch any errors
+    // });
+    
+  }
 
 
-export const fetchWeather = async (query) => {
-    const {data} = await axios.get(BASE_URL, {
-        q: query,
-        units: 'metric',
-        key:API_KEY,
-    });
-    return data;
+export function getLocation() {
+    if (navigator.geolocation) {
+        return navigator.geolocation.watchPosition(showPosition);        
+    } 
 }
 
-// export function getLocation() {
-//     if (navigator.geolocation) {
-//         navigator.geolocation.watchPosition(showPosition);
-//     } 
-// }
-
-// export function showPosition(position) {
-//     weather.setCoordinate(position.coords.latitude, position.coords.longitude);
-
-//     // weather.setCoordinate( 25.3176, 82.9739);
-//     weather.setUnits('metric');
-//     weather.setAPPID(API_KEY);
-//     weather.getAllWeather(function (err, data) {
-//         // data = name1;           
+export function showPosition(position) {
+    weather.setCoordinate(position.coords.latitude, position.coords.longitude);
+    weather.setUnits('metric');
+    weather.setAPPID(API_KEY);
+    weather.getAllWeather(function (err, data) {          
+        console.log(data);
+        return data.json();
         
-//     });
-//     return data;
-// }
+        
+    });
+    
+}
 
-// export function get() {
-//     console.log(data);
-//     return data;
-// }

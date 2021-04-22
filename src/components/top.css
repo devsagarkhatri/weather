@@ -3,13 +3,31 @@
   flex-direction: column;
   font-family: Georgia, "Times New Roman", Times, serif;
   align-items: center;
-  background: rgb(38, 42, 51);
+  
+  background-size: cover;
+  filter: opacity(1) contrast(1.1);
   height: 100%;
+  width: 100%;
   color: white;
 }
+
 
 .top-container .title {
   font-size: 37px;
   align-items: baseline;
   text-decoration: unset;
+}
+
+.title{
+  padding-left: auto;
+  padding-right: auto;
+  
+
+}
+.current-weather{
+  font-size: 36px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
+
 }
