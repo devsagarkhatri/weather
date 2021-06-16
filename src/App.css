@@ -1,6 +1,3 @@
-. {
-  box-sizing: border-box;
-}
 html,
 body,
 #root {
@@ -18,7 +15,7 @@ body {
   height: 100%;
   width: 100%;
   background: transparent;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,19 +30,17 @@ body {
   box-shadow: dimgrey -5px -5px 20px 0px;
   display: flex;
   overflow: hidden;
-  transition: .7s;
+  transition: 0.7s;
 }
 
-.app-container .main-container:hover{
-  box-shadow:  rgba(150,150,150,.4) 5px 5px 40px 20px;
+.app-container .main-container:hover {
+  box-shadow: rgba(150, 150, 150, 0.4) 5px 5px 40px 20px;
   transition: 1.5s;
 }
 
-
 .top-container {
-  flex: 0 0 100%;  
+  flex: 0 0 100%;
   background: transparent;
   z-index: 5;
   text-align: center;
 }
-

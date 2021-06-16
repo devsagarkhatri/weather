@@ -1,12 +1,9 @@
-import React from 'react';
-import './App.css';
-import Store1 from './store1';
+import React from "react";
+import "./App.css";
 import Store from './store';
 
 function App() {
-  return (
-    <Store1/>    
-  );
+  return <Store />;
 }
 
 export default App;
